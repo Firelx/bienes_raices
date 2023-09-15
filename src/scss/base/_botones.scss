@@ -8,4 +8,5 @@
 
 .boton-verde {
     @include boton($verde, $blanco, inline-block);
+    margin-top: 0;
 }

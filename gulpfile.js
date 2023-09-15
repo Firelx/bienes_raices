@@ -12,6 +12,7 @@ const notify = require('gulp-notify');
 const cache = require('gulp-cache');
 const clean = require('gulp-clean');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 const paths = {
     scss: 'src/scss/**/*.scss',
@@ -53,6 +54,12 @@ function versionWebp() {
         .pipe(notify({ message: 'Imagen Completada' }));
 }
 
+function versionAvif() {
+	return src('src/img/**/*.{png,jpg}')
+        .pipe(avif({quality: 50}))
+        .pipe(dest('build/img'));
+
+}
 
 function watchArchivos() {
     watch(paths.scss, css);
@@ -63,4 +70,4 @@ function watchArchivos() {
 
 exports.css = css;
 exports.watchArchivos = watchArchivos;
-exports.default = parallel(css, javascript, imagenes, versionWebp, watchArchivos); 
+exports.default = parallel(css, javascript, imagenes, versionWebp, versionAvif, watchArchivos); 

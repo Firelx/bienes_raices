@@ -30,10 +30,13 @@
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: calc($separacion / 2);
+    margin-top: calc($separacion / 2)rem;
     display: $display;
+    border: none;
 
-    &:hover {
+    margin-top: 3rem;
+       &:hover {
         background-color: darken($color: $bgColor, $amount: 5);
+        cursor: pointer;
     }
 }

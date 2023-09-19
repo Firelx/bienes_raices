@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column; // Vertical en un dispositivo mas pequeño
     padding-top: 3rem;
-    
+    align-items: center;
+
     @include tablet {
         flex-direction: row; // Horizontal en un dispositivo mas grande
         justify-content: space-between;
@@ -11,10 +12,16 @@
 
 .navegacion {
 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .2s ease-in-out, opacity 0.2s linear;
+
     @include tablet {
         display: flex;
         gap: 2rem;
         align-items: center;
+        opacity: 1;
+        visibility: visible;
     }
 
     a {
@@ -24,8 +31,28 @@
         display: block;
         text-align: center;
 
+        &:hover {
+            color: $verde;
+        }
+
         @include tablet {
             font-size: 1.8rem;
         }
     }
+}
+
+/** Menu de hamburguesa **/
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+
+    img {
+        width: 7rem;
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
 }

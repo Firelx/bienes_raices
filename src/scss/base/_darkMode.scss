@@ -1,57 +1,119 @@
 .dark-mode {
-    color: $cyan;
-    background-color: $negro;
+	color: $cyan;
+	background-color: $negro;
 
-    p {
-        color: $cyan;
-    }
+	p {
+		color: $cyan;
+		span {
+			color: $amarillo;
+		}
+	}
 
-    .precio {
-        color: $amarillo;
-    }
+	.precio,
+	.boton-verde,
+	.boton-amarillo,
+	.boton-amarillo-block {
+		color: $amarillo;
+	}
 
-    a, h1, h2, h3, h4 {
-        color: darken($color: $verdeAzul, $amount: 20);
-    }
+	a,
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: darken($color: $verdeAzul, $amount: 20);
+	}
 
-    .anuncio {
-        background-color: $negro;
-        border: 1px solid $verdeAzul;
-    }
+	.header,
+	.boton-verde,
+	.boton-amarillo,
+	.boton-amarillo-block {
+		background-color: $negro;
+	}
 
-    .boton-verde, .boton-amarillo, .boton-amarillo-block {
-        color: $amarillo;
-        background-color: $negro;
-        border: 1px solid $cyan;
+	.anuncio,
+	.footer,
+	.testimonial {
+		background-color: $azulOscuro;
+	}
 
-        &:hover {
-            color: lighten($color: $amarillo, $amount: 20);
-            background-color: #021122;
-        }
-    }
-    
-    .testimonial {
-        color: $cyan;
-        background-color: $negro;
-        border: 1px solid $cyan;
+	.anuncio,
+	.boton-verde,
+	.boton-amarillo,
+	.boton-amarillo-block,
+	.testimonial {
+		border: 1px solid $cyan;
+	}
 
-        p {
-            color: $amarillo
-        }
-    }
+	.boton-verde,
+	.boton-amarillo,
+	.boton-amarillo-block {
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			color: lighten($color: $verde, $amount: 20);
+			background-color: $azulOscuro;
+		}
+	}
 
-    .iconoDarkMode {
-        filter: invert(80%) sepia(67%) saturate(3137%) hue-rotate(130deg) brightness(102%) contrast(86%);
-    }
+	.testimonial {
+		color: $cyan;
 
-    .footer {
-        color: $cyan;
-        background-color: $negro;
-        border-top: 1px solid $cyan;
+		p {
+			color: $amarillo;
+		}
+	}
 
-        a, p {
-            color: $cyan;
-        }
+	.iconoDarkMode {
+		filter: invert(80%) sepia(67%) saturate(3137%) hue-rotate(130deg)
+			brightness(102%) contrast(86%);
+	}
 
-    }
+	.footer {
+		color: $cyan;
+		border-top: 1px solid $cyan;
+		background-color: $azulOscuro;
+
+		a,
+		p {
+			color: $cyan;
+		}
+	}
+
+	.header {
+		color: $cyan;
+		border-bottom: 1px solid $cyan;
+
+		a,
+		p {
+			color: $cyan;
+		}
+	}
+
+	.formulario input:not([type='submit']),
+	.formulario select,
+	.formulario textarea {
+		color: $cyan;
+		background-color: #020c18;
+		border: 1px solid #020c18;
+
+		&::placeholder {
+			color: darken($color: $cyan, $amount: 30);
+		}
+
+		&:focus {
+			border: 1px solid $cyan;
+			outline: $amarillo;
+		}
+	}
+
+	.formulario fieldset {
+		border: 1px solid $cyan;
+		legend {
+			color: $amarillo;
+		}
+
+		p {
+			color: $verdeAzul;
+		}
+	}
 }

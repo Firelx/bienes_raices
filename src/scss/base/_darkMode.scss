@@ -1,0 +1,57 @@
+.dark-mode {
+    color: $cyan;
+    background-color: $negro;
+
+    p {
+        color: $cyan;
+    }
+
+    .precio {
+        color: $amarillo;
+    }
+
+    a, h1, h2, h3, h4 {
+        color: darken($color: $verdeAzul, $amount: 20);
+    }
+
+    .anuncio {
+        background-color: $negro;
+        border: 1px solid $verdeAzul;
+    }
+
+    .boton-verde, .boton-amarillo, .boton-amarillo-block {
+        color: $amarillo;
+        background-color: $negro;
+        border: 1px solid $cyan;
+
+        &:hover {
+            color: lighten($color: $amarillo, $amount: 20);
+            background-color: #021122;
+        }
+    }
+    
+    .testimonial {
+        color: $cyan;
+        background-color: $negro;
+        border: 1px solid $cyan;
+
+        p {
+            color: $amarillo
+        }
+    }
+
+    .iconoDarkMode {
+        filter: invert(80%) sepia(67%) saturate(3137%) hue-rotate(130deg) brightness(102%) contrast(86%);
+    }
+
+    .footer {
+        color: $cyan;
+        background-color: $negro;
+        border-top: 1px solid $cyan;
+
+        a, p {
+            color: $cyan;
+        }
+
+    }
+}

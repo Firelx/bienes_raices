@@ -1,12 +1,38 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        align-items: flex-end;
+    }
+
+    .dark-mode-boton {
+        width: 3rem;
+        margin: 2rem 0;
+        filter: invert(100%);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}
+
 .barra {
     display: flex;
     flex-direction: column; // Vertical en un dispositivo mas pequeño
     padding-top: 3rem;
     align-items: center;
+    
 
     @include tablet {
         flex-direction: row; // Horizontal en un dispositivo mas grande
         justify-content: space-between;
+        align-items: flex-end;
     }
 }
 
